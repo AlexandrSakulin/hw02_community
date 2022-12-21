@@ -44,6 +44,7 @@ class Post(models.Model):
         related_name='posts',
         verbose_name='Группа'
     )
+
     def __str__(self):
         return self.text[:30]
 
