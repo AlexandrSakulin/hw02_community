@@ -12,9 +12,9 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
      <title>
-      {% block title %}
+       {% block title %}
          {{title}}
-      {% endblock title %}
+       {% endblock title %}
      </title>
   </head>
   <body>
@@ -22,9 +22,9 @@
       {% include 'includes/header.html' %}
     </header>
     <main>
-     {% block content %}
+      {% block content %}
        какой то контент
-     {% endblock %}
+      {% endblock %}
     </main>
     <footer class="border-top text-center py-3">
       {% include 'includes/footer.html' %}

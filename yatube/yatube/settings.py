@@ -83,6 +83,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'))
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 POSTS_IN_PAGE = 10
