@@ -4,23 +4,24 @@
 
 {% block content %}
  <div class="container py-5">
-   {% for post in posts %}
-     <article>
-      <ul>
-       <li>
-        Автор: {{ post.author.get_full_name }}
-       </li>
+  <h1>Главная страница</h1>
+  {% for post in posts %}
+    <article>
+     <ul>
+      <li>
+       Автор: {{ post.author.get_full_name }}
+      </li>
        <li>
         Дата публикации: {{ post.pub_date|date:"d E Y" }}
        </li>
-      </ul>
-      <p>{{ post.text|linebreaks }}</p>
-      {% if post.group %}
-        <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
-      {% else %}
-        <span style='color: red'>Этой публикации нет ни в одном сообществе.</span>
+     </ul>
+     <p>{{ post.text|linebreaks }}</p>
+     {% if post.group %}
+       <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+     {% else %}
+       <span style='color: red'>Этой публикации нет ни в одном сообществе.</span>
      {% endif %}
-     </article>
+    </article>
    {% endfor %}
  </div>
 {% endblock %}
